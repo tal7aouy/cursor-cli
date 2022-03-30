@@ -1,0 +1,52 @@
+{
+  "name": "cursor-cli",
+  "description": "A library for toggling the CLI cursor  in the terminal.",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "clean": "rimraf build",
+    "compile": "tsc --skipLibCheck && tstei",
+    "compile:watch": "tsc --skipLibCheck --watch",
+    "lint": "eslint . --ext .ts --fix",
+    "test": "fava",
+    "test:watch": "fava -w",
+    "prepublishOnly": "npm run clean && npm run compile && npm run test"
+  },
+  "bugs": {
+    "url": "https://github.com/tal7aouy/cursor-cli/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Mhammed Talhaouy",
+    "email": "tal7aouy@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tal7aouy/cursor-cli.git"
+  },
+  "homepage": "https://github.com/tal7aouy/cursor-cli#readme",
+  "keywords": [
+    "cli",
+    "cursor",
+    "terminal",
+    "hide",
+    "show",
+    "toggle",
+    "toggle cursor"
+  ],
+  "dependencies": {
+    "when-exit": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.16",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "fava": "^0.0.5",
+    "promise-resolve-timeout": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5",
+    "typescript-transform-export-interop": "^1.0.4"
+  }
+}
